@@ -16,7 +16,6 @@ HMI: Human-Machine Interface
 | REQ-F-05 | The Host PC shall display current temperature on a web dashboard. | Functional | Demonstration |
 | REQ-F-06 | The Host PC shall transmit LED commands on user interaction.      | Functional | Demonstration |
 | REQ-F-07 | The web dashboard shall be accessible remotely.                   | Functional | Demonstration |
-|----------|-------------------------------------------------------------------|------------|---------------|
 
 # 3.2 Timing Requirements
 | ID       | Requirement                                                | Type   | Verification |
@@ -25,5 +24,5 @@ HMI: Human-Machine Interface
 | REQ-T-02 | The ECU shall acknowledge LED commands within 50ms.        | Timing | Test         |
 | REQ-T-03 | The dashboard shall display data no older than 1000ms.     | Timing | Test         |
 | REQ-T-04 | The dashboard shall display round-trip latency.            | Timing | Inspection   |
-|----------|------------------------------------------------------------|--------|--------------|
+
 
