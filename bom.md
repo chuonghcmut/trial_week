@@ -3,7 +3,7 @@
 | Field          | Value                                      |
 |----------------|--------------------------------------------|
 | **Document**   | SDT-2026-001                               |
-| **Project**    | Remote ECU Monitoring & Control System      |
+| **Project**    | Remote ECU Monitoring & Control System     |
 | **Author**     | *(your name)*                              |
 | **Date**       | *(creation date)*                          |
 | **Revision**   | A                                          |
@@ -49,11 +49,11 @@
 
 ### Why Arduino Uno over ESP32 or STM32?
 
-Arduino Uno meets all technical requirements: 6 ADC channels (1 used for LM35), 14 digital I/O pins (3 used for LEDs), hardware UART over USB. ESP32 offers built-in WiFi but this is unnecessary since the architecture uses Host PC as the intermediary between ECU and web dashboard. STM32 provides more processing power but requires an additional debugger (ST-Link) and more complex toolchain setup. Arduino Uno allows focus on process and documentation rather than toolchain debugging.
+Arduino Uno is easy to debug, easy to develop with, and well-suited for a 7-day development project. It meets all technical requirements (ADC for LM35, GPIO for 3 LEDs, UART over USB) without unnecessary complexity. ESP32's built-in WiFi is not needed since the Host PC handles web serving and remote access. STM32 requires an additional debugger (ST-Link) and a more complex toolchain. Arduino Uno lets the team focus on process and documentation rather than toolchain issues.
 
 ### Why UART instead of CAN?
 
-The task specification permits UART at 115200 baud when CAN hardware is unavailable (REQ-C-01). Arduino Uno does not include a built-in CAN controller — using CAN would require an additional MCP2515 module (~30,000 VND), increasing BOM cost and wiring complexity. UART over USB is already available on the board, provides sufficient bandwidth for the two message types (TEMP_REPORT 6 bytes @ 500ms + LED_COMMAND 2 bytes on-demand), and reduces hardware integration risk within the 7-day timeline.
+UART is chosen because the developer is already familiar with UART communication, and the 7-day timeline requires fast development with minimal hardware risk. Arduino Uno has built-in UART over USB — no additional transceiver module needed. CAN would require an external MCP2515 module, adding cost and wiring complexity. UART at 115200 baud provides sufficient bandwidth for the two message types (TEMP_REPORT 6 bytes @ 500ms + LED_COMMAND 2 bytes on-demand). This choice is permitted by REQ-C-01.
 
 ### Why ngrok instead of SSH tunnel or VPN?
 
