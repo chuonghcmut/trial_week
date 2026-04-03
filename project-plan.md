@@ -2,11 +2,9 @@
 
 | Field          | Value                                      |
 |----------------|--------------------------------------------|
-| **Document**   | SDT-2026-001                               |
 | **Project**    | Remote ECU Monitoring & Control System      |
 | **Author**     | *(your name)*                              |
 | **Date**       | *(creation date)*                          |
-| **Revision**   | A                                          |
 | **Duration**   | 7 Calendar Days                            |
 
 ---
