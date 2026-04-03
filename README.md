@@ -70,24 +70,18 @@ Pin assignments: see `02-SWE2-architecture/pin-assignment.md`
 
 ---
 
-## 5. Software Requirements
+## 5. Development Environment
 
-### Host PC
-
-- Python 3.10+
-- pip packages:
-
-```bash
-pip install flask flask-socketio pyserial
-```
-
-- ngrok (free tier) — download from https://ngrok.com/download
-- CH340 USB driver (if not auto-detected by OS)
-
-### Target ECU
-
-- Arduino IDE 2.x — download from https://www.arduino.cc/en/software
-- No additional libraries required (uses built-in Serial, analogRead, digitalWrite)
+| Item | Choice | Why |
+|------|--------|-----|
+| **OS** | Windows | Familiar environment, easy to set up all tools, compatible with Arduino IDE and Python without additional configuration. |
+| **Firmware IDE** | Arduino IDE | Simple and well-supported IDE for Arduino Uno. Built-in serial monitor useful for debugging UART communication during development. |
+| **Firmware Language** | C (Arduino) | Native language for Arduino platform, direct access to hardware registers (ADC, GPIO, UART) with minimal abstraction. |
+| **Host Language** | Python | Fast development for web dashboard and serial communication. Rich ecosystem of libraries (Flask, Socket.IO, pyserial). |
+| **Web Framework** | Flask + Socket.IO | Flask is lightweight and easy to set up. Socket.IO enables real-time bidirectional communication between dashboard and server — required for live temperature updates every 500ms. |
+| **Serial Library** | pyserial | Standard Python library for UART communication with Arduino over USB. |
+| **Remote Access** | ngrok (free tier) | Generates public URL instantly, no public IP or router configuration needed. OEM only needs a browser. |
+| **USB Driver** | CH340 | Required for Arduino Uno clone boards with CH340 USB-to-Serial chip. |
 
 ---
 
