@@ -2,9 +2,9 @@
 
 | Field          | Value                                      |
 |----------------|--------------------------------------------|
-| **Project**    | Remote ECU Monitoring & Control System      |
-| **Author**     | *(your name)*                              |
-| **Date**       | *(creation date)*                          |
+| **Project**    | Remote ECU Monitoring & Control System     |
+| **Author**     | Wilson Nguyen                              |
+| **Date**       | 02/04/2026                                 |
 | **Duration**   | 7 Calendar Days                            |
 
 ---
