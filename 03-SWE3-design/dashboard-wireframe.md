@@ -18,22 +18,22 @@ The dashboard is a single-page web application served by Flask on port 5000. It 
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                  ECU Remote Monitoring Dashboard              │
-│                  ─────────────────────────────                │
+│                  ECU Remote Monitoring Dashboard             │
+│                  ─────────────────────────────               │
 ├──────────────────────────────────────────────────────────────┤
 │                                                              │
 │   ┌────────────────────────────────────────────────────┐     │
-│   │              TEMPERATURE SECTION                    │     │
+│   │              TEMPERATURE SECTION                   │     │
 │   │                                                    │     │
 │   │          🌡  25.1 °C                               │     │
 │   │                                                    │     │
 │   │          Status: OK                                │     │
-│   │          (changes to "⚠ OVER-TEMP" or              │     │
-│   │           "⚠ UNDER-TEMP" on fault)                 │     │
+│   │          (changes to "⚠ OVER-TEMP" or             │     │
+│   │           "⚠ UNDER-TEMP" on fault)                │     │
 │   └────────────────────────────────────────────────────┘     │
 │                                                              │
 │   ┌────────────────────────────────────────────────────┐     │
-│   │              LED CONTROL SECTION                    │     │
+│   │              LED CONTROL SECTION                   │     │
 │   │                                                    │     │
 │   │   LED 0 (Red)     [ TOGGLE ]    State: ON          │     │
 │   │                                 Latency: 23 ms     │     │
@@ -46,13 +46,13 @@ The dashboard is a single-page web application served by Flask on port 5000. It 
 │   └────────────────────────────────────────────────────┘     │
 │                                                              │
 │   ┌────────────────────────────────────────────────────┐     │
-│   │              COMMUNICATION STATUS                   │     │
+│   │              COMMUNICATION STATUS                  │     │
 │   │                                                    │     │
 │   │   Message Counter: 142                             │     │
-│   │   Counter Gaps: frame 87 → 90 (missed 2)          │     │
+│   │   Counter Gaps: frame 87 → 90 (missed 2)           │     │
 │   │                                                    │     │
 │   │   ┌──────────────────────────────────────────┐     │     │
-│   │   │         ⚠ COMM TIMEOUT                   │     │     │
+│   │   │         ⚠ COMM TIMEOUT                  │     │     │
 │   │   │   No data received for 2 seconds         │     │     │
 │   │   └──────────────────────────────────────────┘     │     │
 │   │   (hidden when communication is normal)            │     │
